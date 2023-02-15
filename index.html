@@ -5,8 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>text-editor</title>
+
+    <script src="https://kit.fontawesome.com/1285926584.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="index.css">
+
 </head>
 <body>
-    
+    <div>
+        <h1 class="mb-8 pt-8 text-4xl text-center font-bold text-stone-50">Text Editor</h1>
+    </div>
+
+    <div class="container mx-auto grid grid-cols-3 gap-4 bg-stone-500 p-8">
+        <div class="flex justify-center gap-4">
+            <strong class="cursor-pointer text-2xl" id="bold-btn">B</strong>
+            <strong class="cursor-pointer text-2xl" id="italic-btn"><i>I</i></strong>
+            <strong class="cursor-pointer text-2xl underline" id="underline-btn">U</strong>
+        </div>
+        <div class="flex justify-center gap-4">
+            <div class="text-2xl">
+                <i id="text-left-btn" class="cursor-pointer fa-solid fa-align-left"></i>
+            </div>
+            <div class="text-2xl">
+                <i id="text-center-btn" class="cursor-pointer fa-solid fa-align-center"></i>
+            </div>
+            <div class="text-2xl">
+                <i id="text-right-btn" class="cursor-pointer fa-solid fa-align-right"></i>
+            </div>
+        </div>
+        <div class="flex justify-center gap-4">
+            <input class="input-number" type="number" value="16" id="number-picker">
+            <img src="lettering.png">
+            <input type="color" id="color-picker">
+        </div>
+    </div>
+    <div class="container mx-auto">
+        <textarea class="p-12 w-full bg-stone-800 text-stone-50" cols="137" rows="10" placeholder="Write something ..." id="text-area"></textarea>
+    </div>
+
+    <script src="script/utilities.js"></script>
+    <script src="script/index.js"></script>
+    <script src="script/align.js"></script>
+    <script src="script/picker.js"></script>
 </body>
 </html>
